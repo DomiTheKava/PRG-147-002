@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div id="Imagebuttons">
+        <button onclick="document.getElementById('image').src='images/02_PenkavaPhotos.jpeg'">image1</button>
+        <button onclick="document.getElementById('image').src='images/03_PenkavaPhotos.jpeg'">image2</button>
+        <button onclick="document.getElementById('image').src='images/04_PenkavaPhotos.jpeg'">image3</button>
+    </div>
+    <img src="images/02_PenkavaPhotos.jpeg" alt="" id="image">
+
+    <p id="text"></p>
+    <script>
+        document.getElementById("text").innerHTML = "Hello World";
+    </script>
+    <button onclick="changeText()">Change Text</button>
+</body>
+
+<button onclick="document.getElementById('image').style.width = '500px'">Change Image Width</button>
+<button onclick="document.getElementById('text').style.color = 'red'">Change Color</button>
+
+<button onclick="document.getElementById('image').style.display='none'">hide image</button>
+<button onclick="document.getElementById('image').style.display='block'">show image</button>
+
+</html>
