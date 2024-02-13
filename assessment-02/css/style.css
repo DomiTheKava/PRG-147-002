@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+#foodOrderCount {
+  text-align: center;
+  border: 5px red solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#drinkOrderCount {
+  text-align: center;
+  border: 5px rgb(47, 0, 255) solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#dessertOrderCount {
+  text-align: center;
+  border: 5px rgb(217, 255, 0) solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.holder {
+  display: block;
+  margin-top: 10px;
+}
+
+p,
+label,
+footer {
+  color: white;
+}
+
+#reciept {
+  background-color: rgb(59, 59, 59) !important;
+}
+
+footer {
+  text-align: center;
+}
+
+textarea {
+  text-align: center;
+  margin-left: 10%;
+  width: 80%;
+}
+#customerName {
+  text-align: center;
+}
+#summary {
+  background-color: rgb(28, 114, 189);
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: larger;
+  width: 50%;
+  margin-left: 25%;
+}

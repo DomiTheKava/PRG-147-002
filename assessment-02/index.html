@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
+</head>
+
+<body onload="">
+    <main>
+        <!-- <form action="">
+            <div class="input" id="input menu">
+                Hamburger<input type="checkbox" name="hamburger" id="hamburger" onchange="hamburgerDisplay()">
+                <br>
+                French Fries<input type="checkbox" name="fries" id="fries" value="yes" onchange="fryDisplay()">
+                <br>
+                Hot Dog<input type="checkbox" name="hot dog" id="hotdog" value="yes" onchange="hotdogDisplay()">
+                <br>
+                Pizza<input type="checkbox" name="pizza" value="yes" id="pizza" onchange="pizzaDisplay()">
+                <br>
+                Pasta<input type="checkbox" name="pasta" value="yes" id="pasta" onchange="pastaDisplay()">
+                <br>
+            </div>
+        </form> -->
+
+        <div id="foodOrderCount">
+            <div class="holder">
+                <label for="hamburger">Hamburger</label>
+                <input type="number" value="0" id="hamburger" name="hamburger">
+            </div>
+
+            <div class="holder">
+                <label for="hotdog">Hotdog</label>
+                <input type="number" value="0" id="hotdog" name="hotdog">
+            </div>
+
+            <div class="holder">
+                <label for="frenchFries">French Fries</label>
+                <input type="number" value="0" id="frenchFries" name="frenchFries">
+            </div>
+
+            <div class="holder">
+                <label for="pizza">Pizza slice</label>
+                <input type="number" value="0" id="pizza" name="pizza">
+            </div>
+
+            <div class="holder">
+                <label for="pasta">Pasta</label>
+                <input type="number" value="0" id="pasta" name="pasta">
+            </div>
+        </div>
+
+        <div id="drinkOrderCount">
+            <div class="holder">
+                <label for="water">Water</label>
+                <input type="number" value="0" id="water" name="water">
+            </div>
+
+            <div class="holder">
+                <label for="coke">Coke</label>
+                <input type="number" value="0" id="coke" name="coke">
+            </div>
+
+            <div class="holder">
+                <label for="fanta">Fanta</label>
+                <input type="number" value="0" id="fanta" name="fanta">
+            </div>
+
+            <div class="holder">
+                <label for="drpepper">Dr Pepper</label>
+                <input type="number" value="0" id="drpepper" name="drpepper">
+            </div>
+
+            <div class="holder">
+                <label for="lemonade">Lemonade</label>
+                <input type="number" value="0" id="lemonade" name="lemonade">
+            </div>
+        </div>
+
+
+        <div id="dessertOrderCount">
+            <div class="holder">
+                <label for="cake">Cake</label>
+                <input type="number" value="0" id="cake" name="cake">
+            </div>
+
+            <div class="holder">
+                <label for="icecream">Ice Cream</label>
+                <input type="number" value="0" id="icecream" name="icecream">
+            </div>
+
+            <div class="holder">
+                <label for="cookies">Cookies</label>
+                <input type="number" value="0" id="cookies" name="cookies">
+            </div>
+
+            <div class="holder">
+                <label for="pie">Pie</label>
+                <input type="number" value="0" id="pie" name="pie">
+            </div>
+
+            <div class="holder">
+                <label for="pudding">Pudding</label>
+                <input type="number" value="0" id="pudding" name="pudding">
+            </div>
+        </div>
+
+        <br>
+        <textarea name="custom request" rows=3 cols="30">requests</textarea>
+        <br>
+
+        <div class="name" id="customerName">
+            <label for="name">Your Name:</label>
+            <input type="text" id="customerNameInput" name="name">
+        </div>
+
+        <div id="reciept">
+
+            </p\div>
+
+    </main>
+</body>
+
+<button onclick="sum()" id="summary">View Summary</button>
+
+<footer>-Dominik Penkava-</footer>
+
+</html>
