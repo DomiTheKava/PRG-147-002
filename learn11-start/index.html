@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/switch.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Switch Case</h1>
+        </header>
+        <main>
+
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="birthmonth">Birth Month:</label><br>
+                <input type="text" id="month" name="month"><br><br>
+                <label for="birthdate">Birth Date:</label><br>
+                <input type="text" id="date" name="date"><br><br>
+                <label for="birthyear">Birth Year:</label><br>
+                <input type="text" id="year" name="year"><br><br>
+            </form>
+            <button onclick="calculate()">Submit</button>
+            <p id="nameout">
+
+            </p>
+            <p id="zodiac">
+
+            </p>
+            <p id="chinese">
+
+            </p>
+
+        </main>
+    </div>
+
+
+</body>
+
+<style>
+    #guessCenter {
+        background-color: green;
+        padding: 20px;
+    }
+
+    * {
+        text-align: center;
+    }
+</style>
+
+<script>
+    function calculate() {
+        chi = '';
+        myname = document.getElementById("fname").value;
+        month = parseInt(document.getElementById("month").value);
+        date = parseInt(document.getElementById("date").value);
+        year = parseInt(document.getElementById("year").value);
+
+        console.log(myname + " " + date + " " + year)
+
+        // round up to nearest month and year
+        if (date > 15) {
+            month += 1;
+        }
+        if (month >= 6) {
+            year += 1;
+        }
+
+        console.log("rounded: " + myname + " " + date + " " + year)
+
+        // year examples for reference
+        // 1961: Ox
+        // 1962: Tiger
+        // 1963: Rabbit
+        // 1964: Dragon
+        // 1965: Snake
+        // 1966: Horse
+        // 1967: Goat
+        // 1968: Monkey
+        // 1969: Rooster
+        // 1970: Dog
+        // 1971: Pig
+        // 1972: Rat
+
+        year = Math.abs(year - 5) // calibrate it
+        year = year % 12
+        year = Math.round(year)
+
+        console.log(year)
+
+        switch (year) {
+            case 0:
+                chi = "Ox"
+                break;
+            case 1:
+                chi = "Tiger"
+                break;
+            case 2:
+                chi = "Rabbit"
+                break;
+            case 3:
+                chi = "Dragon"
+                break;
+            case 4:
+                chi = "Snake"
+                break;
+            case 5:
+                chi = "Horse"
+                break;
+            case 6:
+                chi = "Goat"
+                break;
+            case 7:
+                chi = "Monkey"
+                break;
+            case 8:
+                chi = "Rooster"
+                break;
+            case 9:
+                chi = "Dog"
+                break;
+            case 10:
+                chi = "Pig"
+                break;
+            case 11:
+                chi = "Rat"
+                break;
+            default:
+                chi = "Error! Sadface. :(";
+
+
+        }
+        document.getElementById("nameout").innerHTML = myname;
+        document.getElementById("chinese").innerHTML = "Your Chinese zodiac sign is: " + chi;
+
+
+    }
+</script>
+
+</html>
