@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lists Sets and Maps</h1>
+        </header>
+        <main>
+            <h2>List</h2>
+            <p id="list"> </p>
+            <h2>Sets</h2>
+            <p id="set1"></p>
+            <p id="set2"></p>
+            <h2>Maps</h2>
+            <p id="map1"></p>
+            <p id="map2"></p>
+            <p id="map3"></p>
+        </main>
+        <footer>
+            <p>&copy; Meri Engel 2022</p>
+        </footer>
+    </div>
+    <script src="scripts/iteration.js"></script>
+</body>
+
+<script>
+    /*
+    Iterables: https://www.w3schools.com/js/js_iterables.asp
+    Read the page
+    Demonstrate iteration of a list 
+    Create a list of movies, books, or games at least 5 items long and 
+    display them in the list paragraph
+    */
+
+    const games = ["Minecraft", "Bigfoot", "Starwars", "Subnautica", "Valheim"]
+
+    for (o of games) {
+        document.getElementById("list").innerHTML += `<li>${o}</li>`
+    }
+
+    /*
+    JS Sets
+    
+    https://www.w3schools.com/js/js_sets.asp
+    
+    Create a set with at least 5 song titles in it
+    display the contents of the set in the set1 paragraph (use iteration)
+    
+    */
+
+    const set1 = new Set(["Wild World", "Cat's in the Cradle", "Get Back", "Spirit in the Sky", "Come Sail Away"])
+
+    set1.forEach(function (item) {
+        document.getElementById("set1").innerHTML += `<li>${item}</li>`
+    })
+
+
+    // add two more songs to the set then display in the set2 paragraph
+
+    set1.add("Alive")
+    set1.add("Even Flow")
+
+    set1.forEach(function (item) {
+        document.getElementById("set2").innerHTML += `<li>${item}</li>`
+    })
+
+
+
+
+    /* 
+    Maps
+    https://www.w3schools.com/js/js_maps.asp
+    
+    Maps are like dictionaries in python
+    Create a map with five names and emails in it.
+    Display the contents of the map in map1 use the forEach() method (bottom of
+        the reference page)
+    */
+
+    // defaule tab names
+    const map1 = new Map([
+        ["John Doe", "johndoe@example.com"],
+        ["Jane Smith", "janesmith@example.com"],
+        ["Bob Johnson", "bobjohnson@example.com"],
+        ["Emily Davis", "emilydavis@example.com"],
+        ["Michael Brown", "michaelbrown@example.com"]
+    ])
+
+    map1.forEach(function (value, key) {
+        document.getElementById("map1").innerHTML += `<li>${key}: ${value}</li>`
+    })
+
+    // add two new names and emails and display in map2 use the forEach() method
+
+    map1.set("David Wilson", "davidwilson@example.com")
+    map1.set("Sarah Connor", "sarahconnor@example.com")
+
+    map1.forEach(function (value, key) {
+        document.getElementById("map2").innerHTML += `<li>${key}: ${value}</li>`
+    })
+
+
+    // get and display the email of one person, display in map3
+
+    const map3 = map1.get("John Doe")
+    document.getElementById("map3").innerHTML = map3
+</script>
+
+<style>
+    /* --------------------- CSS Reset -------------------- */
+
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+    }
+
+
+    /* HTML5 display-role reset for older browsers */
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    ol,
+    ul,
+    dl {
+        list-style: none;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+
+    /*  ---------------------- Variables ---------------------- */
+
+    :root {
+        --primary: #FF5722;
+        --primary-light: #8559da;
+        --primary-dark: #140078;
+        --secondary: #ffc107;
+        --secondary-light: #fff350;
+        --secondary-dark: #c79100;
+        --text-light: #ffffff;
+        --text-dark: #000000;
+    }
+
+
+    /* ---------------------- layout ------------------------- */
+
+    body {
+        font-family: arial, helvetica, sans-serif;
+        line-height: 1.5;
+        font-size: 1.2em;
+        color: var(--text-dark);
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        min-width: 500px;
+        margin: 20px auto;
+        overflow: auto;
+    }
+
+    footer,
+    main,
+    aside,
+    article,
+    div {
+        clear: both;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: var(--primary);
+        color: var(--text-light);
+    }
+
+    .left {
+        clear: both;
+        float: left;
+        padding: 20px;
+    }
+
+    .right {
+        clear: both;
+        float: right;
+        padding: 20px;
+    }
+
+    .center {
+        clear: both;
+        display: block;
+        margin: 10px auto;
+    }
+
+    img {
+        box-sizing: border-box;
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    header {
+        background: var(--primary);
+        color: var(--text-light);
+        min-height: 80px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    h2 {
+        color: var(--primary);
+        text-align: left;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .buttons {
+        width: 30%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    button {
+        color: var(--text-light);
+        border: 2px solid var(--primary-dark);
+        background: var(--primary-dark);
+        text-decoration: none;
+    }
+
+    button:hover {
+        color: var(--primary-dark);
+        background: var(--secondary-light);
+    }
+
+    p {
+        padding: 10px;
+    }
+
+    #word {
+        padding-left: 60px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+
+    /* responsive*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+    }
+
+
+    /* For mobile phones: */
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+        /* For tablets: */
+        .col-s-1 {
+            width: 8.33%;
+        }
+
+        .col-s-2 {
+            width: 16.66%;
+        }
+
+        .col-s-3 {
+            width: 25%;
+        }
+
+        .col-s-4 {
+            width: 33.33%;
+        }
+
+        .col-s-5 {
+            width: 41.66%;
+        }
+
+        .col-s-6 {
+            width: 50%;
+        }
+
+        .col-s-7 {
+            width: 58.33%;
+        }
+
+        .col-s-8 {
+            width: 66.66%;
+        }
+
+        .col-s-9 {
+            width: 75%;
+        }
+
+        .col-s-10 {
+            width: 83.33%;
+        }
+
+        .col-s-11 {
+            width: 91.66%;
+        }
+
+        .col-s-12 {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+        /* For desktop: */
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    }
+</style>
+
+</html>
