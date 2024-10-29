@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+p {
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
